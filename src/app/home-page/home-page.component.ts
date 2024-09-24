@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {StepperModule} from 'primeng/stepper';
+import {ButtonModule} from 'primeng/button';
 
 @Component({
   selector: 'app-home-page',
