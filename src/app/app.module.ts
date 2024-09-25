@@ -21,6 +21,9 @@ import { InputGroupAddonModule } from 'primeng/inputgroupaddon';
 import { InputTextModule } from 'primeng/inputtext';
 import {DropdownModule} from 'primeng/dropdown';
 import {AnimateOnScrollModule} from 'primeng/animateonscroll'
+import { InputNumberModule } from 'primeng/inputnumber';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
 
 
 
@@ -45,7 +48,10 @@ import {AnimateOnScrollModule} from 'primeng/animateonscroll'
     InputGroupModule,
     DropdownModule,
     AnimateOnScrollModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    InputNumberModule,
+    InputIconModule,
+    IconFieldModule
   ],
   providers: [ 
     PrimeIcons,
