@@ -1,0 +1,72 @@
+<div class="card flex justify-content-center">
+  <p-stepper>
+    <p-stepperPanel header="Overview">
+      <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div class="card flex justify-content-center">
+            <p-card header="Simple Card">
+              <p class="m-0">
+                Hey please follow the steps to use the budget planner
+              </p>
+            </p-card>
+          </div>
+        </div>
+        <div class="flex pt-4 justify-content-end">
+          <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+    
+    <p-stepperPanel header="Fill out the necessary information">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback"
+        let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div
+            class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <form>
+              <p-inputGroup>
+                <p-inputGroupAddon>
+                  <i class="pi pi-user"></i>
+                </p-inputGroupAddon>
+                <input pInputText placeholder="Name" />
+              </p-inputGroup>
+              <p-dropdown
+                [options] = "frequencies"
+                optionLabel = "name"
+                placeholder = "Select the frequency"/>
+                
+               
+            </form>
+            <p-inputNumber 
+            inputId ='currency-us'
+            mode ="currency"
+            currency ="USD"
+            locale ="en-US"
+            placeholder = "Enter Earning pay" />
+          
+          </div>
+        </div>
+        <div class="flex pt-4 justify-content-between">
+          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+          <!-- <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" /> -->
+          <p-button label="Submit" icon="pi pi-arrow-right"/>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+   
+   
+    <!-- <p-stepperPanel header="Header III">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div
+            class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            Content III
+          </div>
+        </div>
+        <div class="flex pt-4 justify-content-start">
+          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+        </div>
+      </ng-template>
+    </p-stepperPanel> -->
+  </p-stepper>
+</div>
