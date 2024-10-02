@@ -34,8 +34,6 @@
                 [options] = "frequencies"
                 optionLabel = "name"
                 placeholder = "Select the frequency"/>
-                
-               
             </form>
             <p-inputNumber 
             inputId ='currency-us'
@@ -47,9 +45,9 @@
           </div>
         </div>
         <div class="flex pt-4 justify-content-between">
-          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+          <p-button class="back-button" label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
           <!-- <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" /> -->
-          <p-button label="Submit" icon="pi pi-arrow-right"/>
+          <p-button class="submit-button" label="Submit" icon="pi pi-arrow-right"/>
         </div>
       </ng-template>
     </p-stepperPanel>
